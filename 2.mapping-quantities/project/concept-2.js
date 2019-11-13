@@ -27,7 +27,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1600, 800)
+  createCanvas(1600, 1000)
 }
 
 
@@ -40,7 +40,10 @@ function draw() {
   push()
   textFont(fontBold);
   textSize(30)
-  text("Does Nuclear Testings Lead to Cancer?", 100, 80)
+  text("Do Nuclear Testings Lead to Cancer?", 100, 80)
+  textSize(15)
+  textFont(fontRegular)
+  text("Radiation from nuclear bombs would lead to various cancer. Hypothetically, more nuclear bomb testings would lead to higher cancer rate. This data visualization will show whether a larger amount of nuclear testings causes higher cancer rate in this country. Besides, this data visualization examines whether a certain country conducted nuclear testings within or outside the country.", 100, 150, 600, 300)
   pop()
   // timeline
   line(100, 400, 1520, 400)
@@ -212,6 +215,9 @@ function draw() {
         push()
         stroke(83, 126, 197)
         line((thisDate - 1990) * 200 + 100, 400, usax + 20, 720 - usarates[0].rate * 40)
+        // line((thisDate - 1990) * 200 + 100, 400, (thisDate - 1990) * 200 + 100, 450)
+        // line((thisDate - 1990) * 200 + 100, 450,usax + 20,450)
+        // line(usax + 20,450,usax + 20,720 - usarates[0].rate * 40)
         // curve((thisDate - 1990) * 200 + 100, 340, (thisDate - 1990) * 200 + 100, 420, usax + 20, 680 - usarates[0].rate * 40, usax + 20, 720 - usarates[0].rate * 40)
         pop()
       }
