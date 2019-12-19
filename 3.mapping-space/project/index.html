@@ -1,25 +1,44 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="libraries/leaflet/leaflet.css" /> <!-- default styles -->
+  <link rel="stylesheet" href="libraries/leaflet/leaflet.css" /> 
   <script src="libraries/leaflet/leaflet.js"></script>
   <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.dom.min.js"></script>
   <script src="libraries/chroma.min.js"></script>
   <script src="libraries/lodash.min.js"></script>
   <script src="libraries/brewer.js"></script>
   <script src="libraries/cities.js"></script>
+  
+  <style>
+    html, body {
+      padding: 0;
+      margin: 0;
+    }
 
+    /* default dimensions for the leaflet map */
+    #quake-map{
+      width: 100%;
+      height: 40%;
+
+      top: 1500px;
+
+      z-index: 1;
+    }
+  </style>
 </head>
 <body>
   <!-- The container div for our leaflet map -->
-  <!-- <div id="la-map"></div> -->
-  <!-- <div id="tokyo-map"></div> -->
+  <!-- <div style="display: flex; flex-direction: row;"> -->
+  
+  <script src="sketch.js"></script>
+  <div id="quake-map"></div>
+  <!-- <div id="distance"></div> -->
+  <!-- </div> -->
 
   <!-- load our dependencies and sketch file -->
-  <script src="sketch.js"></script>
+ 
 
   <!-- p5.js will create a canvas element here at runtime -->
 </body>
 </html>
-
-
